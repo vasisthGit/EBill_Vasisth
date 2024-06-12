@@ -1,0 +1,62 @@
+
+.navbar {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #333;
+    background-image: linear-gradient(to bottom, #443bc4, #50bd6f);
+    background-color: #3498db; 
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .nav-link {
+    color: #fff;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ccc;
+  }
+  
+  .nav-item.active {
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  .nav-item.active.nav-link {
+    color: #fff;
+  }
+  
+  /* Add some spacing between nav items */
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  /* Make the navbar more responsive */
+  @media (max-width: 768px) {
+   .navbar-nav {
+      flex-direction: column;
+    }
+   .nav-item {
+      margin-right: 0;
+    }
+  }
+  
+  /* Add a subtle shadow to the navbar */
+  .navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

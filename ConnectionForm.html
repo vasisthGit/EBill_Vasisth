@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for New Light Connection</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">E-Bill Payment Portal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Feedback.html">Feedback </a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a class="nav-link" href="PaymentForm.html">Bill Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="BillHistory.html">Bill History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ConnectionForm.html">New Connection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Apply for New Light Connection</h1>
+        <form action="submit_application.html" method="post">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea class="form-control" id="address" name="address" rows="4" required></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Connection Details</legend>
+                <div class="form-group">
+                    <label for="connection-type">Connection Type:</label>
+                    <select class="form-control" id="connection-type" name="connection-type" required>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="industrial">Industrial</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="load-requirement">Load Requirement (in kW):</label>
+                    <input type="number" class="form-control" id="load-requirement" name="load-requirement" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="preferred-date">Preferred Connection Date:</label>
+                    <input type="date" class="form-control" id="preferred-date" name="preferred-date">
+                </div>
+                <div class="form-group">
+                    <label for="phase">Phase:</label>
+                    <select class="form-control" id="phase" name="phase" required>
+                        <option value="single">Single Phase</option>
+                        <option value="three">Three Phase</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="voltage">Voltage:</label>
+                    <select class="form-control" id="voltage" name="voltage" required>
+                        <option value="220">220V</option>
+                        <option value="440">440V</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Supporting Documents</legend>
+                <div class="form-group">
+                    <label for="documents">Upload Supporting Documents:</label>
+                    <input type="file" class="form-control-file" id="documents" name="documents" multiple>
+                </div>
+                <div class="form-group">
+                    <label for="id-proof">Upload ID Proof:</label>
+                    <input type="file" class="form-control-file" id="id-proof" name="id-proof" required>
+                </div>
+                <div class="form-group">
+                    <label for="address-proof">Upload Address Proof:</label>
+                    <input type="file" class="form-control-file" id="address-proof" name="address-proof" required>
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
