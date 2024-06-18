@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
 
-<div class="container mt-5">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('../image.jpg') no-repeat center center fixed;
+            background-size: cover; /* Ensure the background covers the entire page */
+        }
+        .card {
+            width: 100%;
+            max-width: 500px; /* Set maximum width for the card */
+            min-width: 400px; /* Set minimum width for the card */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-8 col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <img src="logo.jpg" class="img-fluid mb-3" height="50" width="100" alt="Logo">
+                    <div class="d-flex justify-content-center mb-3">
+                        <img src="logo.jpg" class="img-fluid mb-3" height="50" width="100" alt="Logo">
+                    </div>
                     <h2 class="card-title text-center">Log In to the E-Bill Portal</h2>
-                    <form>
+                    <form action="" method="post">
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" id="email" name="email" required>
@@ -27,8 +47,8 @@
                         <div class="form-group text-center">
                             <a href="#">Forgot password?</a>
                         </div>
-                        <button type="submit" onclick="redirectToHomepage()" class="btn btn-primary btn-block">Log In</button>
-                        <p class="mt-3 text-center">Create new account? <a href="Signup.html">Sign Up Here</a></p>
+                        <button onclick="redirectToHomepage()"  class="btn btn-primary btn-block">Log In</button>
+                        <p class="mt-3 text-center">Create new account? <a href="/Signup.html">Sign Up Here</a></p>
                     </form>
                 </div>
             </div>
@@ -37,7 +57,7 @@
 </div>
 <script>
     function redirectToHomepage() {
-        window.location.href = "index.html"; // Replace "homepage.html" with the actual URL of your homepage
+        window.location.href = "index.html"; 
     }
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
